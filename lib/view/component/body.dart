@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shoping_bags_app/model/prroduct/productModel.dart';
+import 'package:shoping_bags_app/view/source/detail_screen/detail_screen.dart';
 
 import '../source/ctageryes/catageres.dart';
 import '../utils/constannts/Color_constant.dart';
@@ -28,6 +29,11 @@ class Body extends StatelessWidget {
             crossAxisSpacing: 20,
             childAspectRatio:0.75),
             itemBuilder: (context ,index)=>Iemcard(product: product[index],
+              press: ()=>Navigator.push(context, MaterialPageRoute(
+                  builder: (context)=>DetailScreen(product: product[index])
+
+
+              )),
              // press: product[index],
 
             )))
